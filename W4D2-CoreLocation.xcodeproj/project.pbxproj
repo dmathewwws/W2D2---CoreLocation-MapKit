@@ -13,6 +13,11 @@
 		12AD6EB71C611328005193C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12AD6EB51C611328005193C7 /* Main.storyboard */; };
 		12AD6EB91C611328005193C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12AD6EB81C611328005193C7 /* Assets.xcassets */; };
 		12AD6EBC1C611328005193C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12AD6EBA1C611328005193C7 /* LaunchScreen.storyboard */; };
+		12AD6EC61C611C36005193C7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12AD6EC51C611C36005193C7 /* CoreLocation.framework */; };
+		12AD6EC91C61221F005193C7 /* MyLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12AD6EC81C61221F005193C7 /* MyLocationManager.m */; };
+		12AD6ECB1C612EC2005193C7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12AD6ECA1C612EC2005193C7 /* MapKit.framework */; };
+		12AD6ECE1C6130D3005193C7 /* FoursquareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12AD6ECD1C6130D3005193C7 /* FoursquareManager.m */; };
+		12AD6ED11C613695005193C7 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 12AD6ED01C613695005193C7 /* Venue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,14 @@
 		12AD6EB81C611328005193C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12AD6EBB1C611328005193C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12AD6EBD1C611328005193C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12AD6EC51C611C36005193C7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		12AD6EC71C61221F005193C7 /* MyLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocationManager.h; sourceTree = "<group>"; };
+		12AD6EC81C61221F005193C7 /* MyLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocationManager.m; sourceTree = "<group>"; };
+		12AD6ECA1C612EC2005193C7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		12AD6ECC1C6130D3005193C7 /* FoursquareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoursquareManager.h; sourceTree = "<group>"; };
+		12AD6ECD1C6130D3005193C7 /* FoursquareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoursquareManager.m; sourceTree = "<group>"; };
+		12AD6ECF1C613695005193C7 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		12AD6ED01C613695005193C7 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12AD6ECB1C612EC2005193C7 /* MapKit.framework in Frameworks */,
+				12AD6EC61C611C36005193C7 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +57,8 @@
 		12AD6EA01C611328005193C7 = {
 			isa = PBXGroup;
 			children = (
+				12AD6ECA1C612EC2005193C7 /* MapKit.framework */,
+				12AD6EC51C611C36005193C7 /* CoreLocation.framework */,
 				12AD6EAB1C611328005193C7 /* W4D2-CoreLocation */,
 				12AD6EAA1C611328005193C7 /* Products */,
 			);
@@ -62,6 +79,12 @@
 				12AD6EB01C611328005193C7 /* AppDelegate.m */,
 				12AD6EB21C611328005193C7 /* ViewController.h */,
 				12AD6EB31C611328005193C7 /* ViewController.m */,
+				12AD6ECC1C6130D3005193C7 /* FoursquareManager.h */,
+				12AD6ECD1C6130D3005193C7 /* FoursquareManager.m */,
+				12AD6ECF1C613695005193C7 /* Venue.h */,
+				12AD6ED01C613695005193C7 /* Venue.m */,
+				12AD6EC71C61221F005193C7 /* MyLocationManager.h */,
+				12AD6EC81C61221F005193C7 /* MyLocationManager.m */,
 				12AD6EB51C611328005193C7 /* Main.storyboard */,
 				12AD6EB81C611328005193C7 /* Assets.xcassets */,
 				12AD6EBA1C611328005193C7 /* LaunchScreen.storyboard */,
@@ -149,7 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12AD6EC91C61221F005193C7 /* MyLocationManager.m in Sources */,
+				12AD6ECE1C6130D3005193C7 /* FoursquareManager.m in Sources */,
 				12AD6EB41C611328005193C7 /* ViewController.m in Sources */,
+				12AD6ED11C613695005193C7 /* Venue.m in Sources */,
 				12AD6EB11C611328005193C7 /* AppDelegate.m in Sources */,
 				12AD6EAE1C611328005193C7 /* main.m in Sources */,
 			);
@@ -298,6 +324,7 @@
 				12AD6EC21C611328005193C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

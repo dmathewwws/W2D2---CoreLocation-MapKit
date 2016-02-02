@@ -7,8 +7,15 @@
 //
 
 #import "ViewController.h"
+#import "MyLocationManager.h"
+#import <MapKit/MapKit.h>
+#import "FoursquareManager.h"
 
-@interface ViewController ()
+#define zoominMapArea 2100
+
+@interface ViewController () <MKMapViewDelegate>
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
@@ -17,6 +24,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    
+    
+}
+
+- (void) initiateMap {
+    
+    MyLocationManager *myLocationManager = [MyLocationManager sharedManager] ;
+    NSLog(@"My location in ViewController is %@", myLocationManager.currentLocation);
+    
+    CLLocationCoordinate2D zoomLocation = CLLocationCoordinate2DMake(myLocationManager.currentLocation.coordinate.latitude, myLocationManager.currentLocation.coordinate.longitude);
+    
+    MKCoordinateRegion adjustedRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, zoominMapArea, zoominMapArea);
+    
+    [_mapView setRegion:adjustedRegion animated:YES];
+    
+    
+    [FoursquareManager responseFrom4sq:myLocationManager.currentLocation categoryId:@"4d4b7105d754a06377d81259" limit:@"10" block:^(NSArray *locations, NSError *error) {
+        
+        //code will execute when response is back form Foursquare
+        
+        NSLog(@"MyLocation is %@", locations);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.mapView addAnnotations:locations];
+        });
+
+    }];
+
+
+}
+
+-(void)mapViewDidFinishLoadingMap:(MKMapView *)mapView{
+    
+    [self initiateMap];
+    
 }
 
 - (void)didReceiveMemoryWarning {
