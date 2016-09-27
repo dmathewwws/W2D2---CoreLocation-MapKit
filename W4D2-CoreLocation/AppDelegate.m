@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "MyLocationManager.h"
 
 @interface AppDelegate ()
 
