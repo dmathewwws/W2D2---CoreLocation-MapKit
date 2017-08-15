@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		123D1CAF1F43546900192C14 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123D1CAE1F43546900192C14 /* CoreLocation.framework */; };
+		123D1CB11F43546F00192C14 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123D1CB01F43546F00192C14 /* MapKit.framework */; };
+		123D1CB41F4354A800192C14 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 123D1CB31F4354A800192C14 /* LocationManager.m */; };
+		123D1CB71F43668800192C14 /* FoursquareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 123D1CB61F43668800192C14 /* FoursquareManager.m */; };
+		123D1CBA1F43681500192C14 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 123D1CB91F43681500192C14 /* Venue.m */; };
 		12AD6EAE1C611328005193C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 12AD6EAD1C611328005193C7 /* main.m */; };
 		12AD6EB11C611328005193C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 12AD6EB01C611328005193C7 /* AppDelegate.m */; };
 		12AD6EB41C611328005193C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12AD6EB31C611328005193C7 /* ViewController.m */; };
@@ -16,6 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		123D1CAE1F43546900192C14 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		123D1CB01F43546F00192C14 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		123D1CB21F4354A800192C14 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		123D1CB31F4354A800192C14 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		123D1CB51F43668800192C14 /* FoursquareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoursquareManager.h; sourceTree = "<group>"; };
+		123D1CB61F43668800192C14 /* FoursquareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoursquareManager.m; sourceTree = "<group>"; };
+		123D1CB81F43681500192C14 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		123D1CB91F43681500192C14 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 		12AD6EA91C611328005193C7 /* W4D2-CoreLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "W4D2-CoreLocation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12AD6EAD1C611328005193C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		12AD6EAF1C611328005193C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +46,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				123D1CB11F43546F00192C14 /* MapKit.framework in Frameworks */,
+				123D1CAF1F43546900192C14 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		123D1CAD1F43546800192C14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				123D1CB01F43546F00192C14 /* MapKit.framework */,
+				123D1CAE1F43546900192C14 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		12AD6EA01C611328005193C7 = {
 			isa = PBXGroup;
 			children = (
 				12AD6EAB1C611328005193C7 /* W4D2-CoreLocation */,
 				12AD6EAA1C611328005193C7 /* Products */,
+				123D1CAD1F43546800192C14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +87,12 @@
 				12AD6EB01C611328005193C7 /* AppDelegate.m */,
 				12AD6EB21C611328005193C7 /* ViewController.h */,
 				12AD6EB31C611328005193C7 /* ViewController.m */,
+				123D1CB21F4354A800192C14 /* LocationManager.h */,
+				123D1CB31F4354A800192C14 /* LocationManager.m */,
+				123D1CB51F43668800192C14 /* FoursquareManager.h */,
+				123D1CB61F43668800192C14 /* FoursquareManager.m */,
+				123D1CB81F43681500192C14 /* Venue.h */,
+				123D1CB91F43681500192C14 /* Venue.m */,
 				12AD6EB51C611328005193C7 /* Main.storyboard */,
 				12AD6EB81C611328005193C7 /* Assets.xcassets */,
 				12AD6EBA1C611328005193C7 /* LaunchScreen.storyboard */,
@@ -149,7 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				123D1CB41F4354A800192C14 /* LocationManager.m in Sources */,
+				123D1CB71F43668800192C14 /* FoursquareManager.m in Sources */,
 				12AD6EB41C611328005193C7 /* ViewController.m in Sources */,
+				123D1CBA1F43681500192C14 /* Venue.m in Sources */,
 				12AD6EB11C611328005193C7 /* AppDelegate.m in Sources */,
 				12AD6EAE1C611328005193C7 /* main.m in Sources */,
 			);
@@ -298,6 +332,7 @@
 				12AD6EC21C611328005193C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
